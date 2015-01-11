@@ -1,7 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id": "https://restauth.net/REP-002",
-  
   "definitions": {
     "password": {
       "type": "object",
@@ -25,10 +24,10 @@
         "properties": {
           "password": { "$ref": "#/definitions/password" },
           "hosts": {
-	    "type": "array",
-	    "items": {
-	      "type": "string"
-	    }
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         },
         "additionalProperties": false
@@ -41,10 +40,10 @@
         "properties": {
           "password": { "$ref": "#/definitions/password" },
           "properties": {
-	    "type": "object",
-	    "additionalProperties": {
-	      "type": "string"
-	    }
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
           }
         },
         "additionalProperties": false
@@ -55,31 +54,31 @@
       "additionalProperties": {
         "type": "object",
         "properties": {
-	  "users": {
-	    "type": "array",
-	    "items": {
-	      "type": "string"
-	    }
-	  },
-	  "service": {
-	    "type": "string"
-	  },
-	  "subgroups": {
-	    "type": "array",
-	    "items": {
-	      "type": "object",
-	      "properties": {
-		"name": {
-		  "type": "string"
-		},
-		"service": {
-		  "type": "string"
-		}
-	      },
-	      "required": ["name"],
-	      "additionalProperties": false
-	    }
-	  }
+      "users": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "service": {
+        "type": "string"
+      },
+      "subgroups": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+        "name": {
+          "type": "string"
+        },
+        "service": {
+          "type": "string"
+        }
+          },
+          "required": ["name"],
+          "additionalProperties": false
+        }
+      }
         },
         "additionalProperties": false
       }
