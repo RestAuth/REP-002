@@ -35,4 +35,5 @@ class TestTestdata(unittest.TestCase):
                 with open(path) as fp:
                     data = json.load(fp)
 
-                jsonschema.validate(data, schema)
+                with self.assertRaises(jsonschema.ValidationError):
+                    jsonschema.validate(data, schema)
