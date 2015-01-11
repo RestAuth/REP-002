@@ -3,3 +3,5 @@
 /include/
 /bin/
 /lib/
+*.sw[po]
+*.pyc
