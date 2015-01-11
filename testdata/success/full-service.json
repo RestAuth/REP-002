@@ -1,0 +1,11 @@
+{
+    "services": {
+        "example.com": {
+            "hosts": ["127.0.0.1", "::1"],
+            "password": {
+                "hash": "foobar",
+                "algorithm": "whatever"
+            }
+        }
+    }
+}
