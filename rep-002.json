@@ -56,7 +56,7 @@
             "url": {
               "type": "string",
               "format": "uri"
-            }
+            },
             "additionalProperties": {
               "type": "string"
             }
@@ -86,7 +86,7 @@
               "type": "object",
               "properties": {
                 "name": {
-                  "type": "string"
+                  "type": "string",
                   "minLength": 1
                 },
                 "service": {
