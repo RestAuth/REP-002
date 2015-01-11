@@ -16,6 +16,7 @@
       "additionalProperties": false
     }
   },
+  "type": "object",
   "properties": {
     "services": {
       "type": "object",
