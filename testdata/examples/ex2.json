@@ -2,10 +2,16 @@
     "users": {
         "bareuser": {},
         "onlypassword": {
-            "password": "this user only has a password, no properties."
+            "password": {
+                "hash": "this user only has a password, no properties.",
+                "algorithm": "plain"
+            }
         },
         "mati": {
-            "password": "rawpassword",
+            "password": {
+                "hash": "plaintext-password",
+                "algorithm": "plain"
+            },
             "properties": {
                 "email": "mati@example.com",
                 "last login": "2014-11-16 10:27:49",
