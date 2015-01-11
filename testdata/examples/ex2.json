@@ -14,9 +14,9 @@
             },
             "properties": {
                 "email": "mati@example.com",
-                "last login": "2014-11-16 10:27:49",
+                "last login": "2015-01-11T17:54:12.143553+01:00",
                 "full name": "Mathias Ertl",
-                "date joined": "2014-11-16 10:27:49"
+                "date joined": "2015-01-01T17:54:12.143553+01:00"
             }
         },
         "full example": {
@@ -26,9 +26,9 @@
             },
             "properties": {
                 "email": "mati@fsinf.at",
-                "last login": "2014-11-16 10:27:49",
+                "last login": "2015-01-11T16:54:12.143553+01:00",
                 "full name": "foo foo",
-                "date joined": "2014-11-16 10:27:49"
+                "date joined": "2015-01-01T16:54:12.143553+01:00"
             }
         }
     }
