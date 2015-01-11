@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://restauth.net/REP-002",
+  
+  "definitions": {
+    "password": {
+      "type": "object",
+      "properties": {
+        "hash": {
+          "type": "string"
+        },
+        "algorithm": {
+          "type": "string"
+        }
+      },
+      "required": ["hash", "algorithm"],
+      "additionalProperties": false
+    }
+  },
+  "properties": {
+    "services": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "password": { "$ref": "#/definitions/password" },
+          "hosts": {
+	    "type": "array",
+	    "items": {
+	      "type": "string"
+	    }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "users": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "password": { "$ref": "#/definitions/password" },
+          "properties": {
+	    "type": "object",
+	    "additionalProperties": {
+	      "type": "string"
+	    }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "groups": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+	  "users": {
+	    "type": "array",
+	    "items": {
+	      "type": "string"
+	    }
+	  },
+	  "service": {
+	    "type": "string"
+	  },
+	  "subgroups": {
+	    "type": "array",
+	    "items": {
+	      "type": "object",
+	      "properties": {
+		"name": {
+		  "type": "string"
+		},
+		"service": {
+		  "type": "string"
+		}
+	      },
+	      "required": ["name"],
+	      "additionalProperties": false
+	    }
+	  }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
