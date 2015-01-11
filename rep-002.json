@@ -41,6 +41,22 @@
           "password": { "$ref": "#/definitions/password" },
           "properties": {
             "type": "object",
+            "email": {
+              "type": "string",
+              "format": "email"
+            },
+            "date joined": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "last login": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "url": {
+              "type": "string",
+              "format": "uri"
+            }
             "additionalProperties": {
               "type": "string"
             }
@@ -54,31 +70,33 @@
       "additionalProperties": {
         "type": "object",
         "properties": {
-      "users": {
-        "type": "array",
-        "items": {
-          "type": "string"
-        }
-      },
-      "service": {
-        "type": "string"
-      },
-      "subgroups": {
-        "type": "array",
-        "items": {
-          "type": "object",
-          "properties": {
-        "name": {
-          "type": "string"
-        },
-        "service": {
-          "type": "string"
-        }
+          "users": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
           },
-          "required": ["name"],
-          "additionalProperties": false
-        }
-      }
+          "service": {
+            "type": "string"
+          },
+          "subgroups": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                  "minLength": 1
+                },
+                "service": {
+                  "type": "string"
+                }
+              },
+              "required": ["name"],
+              "additionalProperties": false
+            }
+          }
         },
         "additionalProperties": false
       }
