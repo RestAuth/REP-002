@@ -17,3 +17,22 @@ class TestTestdata(unittest.TestCase):
                     data = json.load(fp)
 
                 jsonschema.validate(data, schema)
+
+    def test_success(self):
+        for dirpath, dirnames, filenames in os.walk(os.path.join('testdata', 'success')):
+            for filename in [f for f in filenames if f.endswith('.json')]:
+                path = os.path.join(dirpath, filename)
+                with open(path) as fp:
+                    data = json.load(fp)
+
+                jsonschema.validate(data, schema)
+
+    def test_error(self):
+        for dirpath, dirnames, filenames in os.walk(os.path.join('testdata', 'error')):
+            for filename in [f for f in filenames if f.endswith('.json')]:
+                print(filename)
+                path = os.path.join(dirpath, filename)
+                with open(path) as fp:
+                    data = json.load(fp)
+
+                jsonschema.validate(data, schema)
