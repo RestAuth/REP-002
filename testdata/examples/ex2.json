@@ -1,0 +1,29 @@
+{
+    "users": {
+        "bareuser": {},
+        "onlypassword": {
+            "password": "this user only has a password, no properties."
+        },
+        "mati": {
+            "password": "rawpassword",
+            "properties": {
+                "email": "mati@example.com",
+                "last login": "2014-11-16 10:27:49",
+                "full name": "Mathias Ertl",
+                "date joined": "2014-11-16 10:27:49"
+            }
+        },
+        "full example": {
+            "password": {
+                "hash": "$apr1$fd7YiwYk$P.jfn.Q64kh6cpmTpAxy30",
+                "algorithm": "apr_md5_crypt"
+            },
+            "properties": {
+                "email": "mati@fsinf.at",
+                "last login": "2014-11-16 10:27:49",
+                "full name": "foo foo",
+                "date joined": "2014-11-16 10:27:49"
+            }
+        }
+    }
+}

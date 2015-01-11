@@ -1,0 +1,23 @@
+{
+    "groups": {
+        "admins": {
+            "users": [
+                "administrator"
+            ],
+            "service": "example.com"
+        },
+        "users": {
+            "users": [
+                "normal-user",
+                "normal-user 2"
+            ],
+            "service": "example.com",
+            "subgroups": [
+                {
+                    "name": "admins",
+                    "service": "example.com"
+                }
+            ]
+        }
+    }
+}

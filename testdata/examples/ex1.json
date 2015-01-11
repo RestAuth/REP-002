@@ -1,0 +1,27 @@
+{
+    "services": {
+        "example.at": {},
+        "example.org": {
+            "hosts": [
+                "127.0.0.1",
+                "::1"
+            ]
+        },
+        "example.net": {
+            "password": {
+                "hash": "$apr1$fd7YiwYk$P.jfn.Q64kh6cpmTpAxy30",
+                "algorithm": "apr_md5_crypt"
+            }
+        },
+        "example.com": {
+            "password": {
+                "hash": "plaintext-password",
+                "algorithm": "plain"
+            },
+            "hosts": [
+                "127.0.0.1",
+                "::1"
+            ]
+        }
+    }
+}
