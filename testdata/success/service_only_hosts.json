@@ -1,0 +1,13 @@
+{
+    "services": {
+        "example.com": {
+            "hosts": []
+        },
+        "example.net": {
+            "hosts": ["::1"]
+        },
+        "example.org": {
+            "hosts": ["::1", "127.0.0.1"]
+        }
+    }
+}
